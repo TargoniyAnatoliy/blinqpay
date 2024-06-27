@@ -54,12 +54,12 @@ button {
 }
 
 .wrapper {
-  background-color: #F7F3FA;
+  background-color: #fff;
 }
 
 .wrapper *[class="container"] {
   padding: 0 15px;
-  max-width: 1950px;
+  max-width: 1530px;
   margin: 0 auto;
 }
 
@@ -171,8 +171,9 @@ header .container .openbtn {
 /*===================BANNER======================*/
 
 .banner {
-  padding-top: 150px;
+  padding-top: 150px;  
   background: url(../assets/img/background/bg-banner2.svg) right 0 / contain no-repeat, url(../assets/img/background/bg-banner.svg) 0 0 / cover no-repeat;
+  background-color: #F7F3FA;
 }
 
 .banner .container {
@@ -237,7 +238,7 @@ header .container .openbtn {
 
 /*===================PAYMENTS======================*/
 .payments {
-  background: url(../assets/img/background/bg-payments.svg) 0 500px / cover no-repeat;
+  background: #F7F3FA url(../assets/img/background/bg-payments.svg) 0 500px / cover no-repeat;
   padding-top: 110px;
   padding-bottom: 50px;
 }
@@ -344,7 +345,11 @@ header .container .openbtn {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  overflow: hidden;
+  transition: all 2s;
+  padding: 5px 10px;
 }
+
 
 .payments .container .partners-row .item a  img {
   transition: all 0.3s;
@@ -360,7 +365,7 @@ header .container .openbtn {
   .payments .container {
     grid-template-rows: repeat(3, minmax(70px, auto));
     grid-template-columns: 1fr;
-    row-gap: 30px;
+    row-gap: 50px;
     column-gap: 0;
   }
 
@@ -436,9 +441,14 @@ header .container .openbtn {
 }
 
 .mobile-banking .container {
+  overflow: hidden;
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  row-gap: 50px;
 }
 
 .mobile-banking .container .description-item {
@@ -479,6 +489,7 @@ header .container .openbtn {
   object-fit: cover;
 }
 
+/*=================GALLERY1========================*/
 .mobile-banking .container .mobile-banking-gallery1 {
   min-width: 300px;
   min-height: 212px;
@@ -535,12 +546,158 @@ header .container .openbtn {
   border-radius: 74% 26% 20% 80% / 66% 67% 33% 34%;
 }
 
+/*=================GALLERY2========================*/
+
+.mobile-banking .container .mobile-banking-gallery2 {
+  justify-self: end;
+  border-radius: 15px 0 0 15px;
+  position: relative;
+  left: 44px;
+  width: 710px;
+  overflow: hidden;
+  height: 350px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px 154px 120px;
+  row-gap: 15px;
+}
+
+.mobile-banking .container .mobile-banking-gallery2 .gallery-row1 {
+  overflow: hidden;
+  position: relative;
+  top: -10px;
+  left: -10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 330px 186px 174px);
+  justify-items: center;
+  column-gap: 15px;
+}
+.mobile-banking .container .mobile-banking-gallery2 .gallery-row2 {
+  overflow: hidden;
+  position: relative;
+  top: -5px;
+  left: -30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 70px 280px 280px 70px);
+  justify-items: center;
+  column-gap: 15px;
+}
+.mobile-banking .container .mobile-banking-gallery2 .gallery-row3 {
+  overflow: hidden;
+  position: relative;
+  top: -5px;
+  left: -30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 245px 255px 200px);
+  justify-items: center;
+  column-gap: 15px;
+}
+
+.mobile-banking .container .mobile-banking-gallery2 .gallery-item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.mobile-banking .mobile-banking-gallery2 .gallery-row2 .gallery-item:first-child img, .mobile-banking .mobile-banking-gallery2 .gallery-row2 .gallery-item:last-child img {
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 980px) {
   .mobile-banking .container {
     grid-template-rows: repeat(6, auto);
     grid-template-columns: 1fr;
   }
+
+  .mobile-banking .container .mobile-banking-gallery2 {
+    grid-row: 5 / 6;
+  }
 }
+
+@media (max-width: 580px) {
+  .mobile-banking .container {
+    justify-content: center;
+  }
+
+  .mobile-banking .container .mobile-banking-gallery1 {
+    grid-template-rows: repeat(2, 130px);
+    grid-template-columns: repeat(3, 130px);
+    gap: 5px;
+  }
+
+  .mobile-banking .container .mobile-banking-gallery2 {
+    left: 0;
+  }
+}
+
+/*=================MOBILE-BANKING========================*/
+
+.testimonials {
+  padding-top: 140px;
+  position: relative;
+  background: url(../assets/img/testimonials/bg-testimonials.png) center / 100% 90% no-repeat;
+}
+
+.testimonials .container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: minmax(300px, 550px) minmax(300px, 624px);
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+
+.testimonials .container .testimonials-content {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.64px;
+}
+
+.testimonials .container .testimonials-content h2 {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+
+.testimonials .container .testimonials-content h2 span {
+  color: #5C0E62;
+}
+
+.testimonials .container .testimonials-content p {
+
+}
+
+.testimonials .container .testimonials-gallery {
+  justify-self: end;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: 250px 200px;
+}
+
+.testimonials .container .testimonials-gallery .gallery-item {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonials .container .testimonials-gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials .container .testimonials-gallery .gallery-item.active {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+}
+
+.testimonials .container .testimonials-gallery:nth-child(2) {
+  widt
+}
+
 
 /*=========================================*/
 
