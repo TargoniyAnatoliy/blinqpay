@@ -4,4 +4,4 @@ The website features a modern, responsive design with a focus on user experience
 
 Key Features:
 
-• Technologies Used: TML, SCSS, JS.
+• Technologies Used: HTML, SCSS, JS.
